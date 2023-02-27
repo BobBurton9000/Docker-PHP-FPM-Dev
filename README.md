@@ -1,0 +1,2 @@
+# DO NOT USE THIS IN PRODUCTION
+This image runs PHP-FPM as root to avoid permission problems caused by rootless docker and uid mapping on Linux. It is suitable for a local development environment **only**.
