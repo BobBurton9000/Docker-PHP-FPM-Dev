@@ -15,9 +15,9 @@ COPY xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 RUN curl https://getcomposer.org/download/2.5.4/composer.phar --output /usr/local/bin/composer
 RUN chmod +x /usr/local/bin/composer
-RUN usermod -u $USER_UID www
-RUN groupmod -g $GROUP_UID www
+#RUN usermod -u $USER_UID www
+#RUN groupmod -g $GROUP_UID www
 
-COPY zzz-docker.conf /usr/local/etc/php-fpm.d/zzz-docker.conf
+#COPY zzz-docker.conf /usr/local/etc/php-fpm.d/zzz-docker.conf
 
 CMD ["php-fpm", "-R"]
